@@ -7,6 +7,11 @@ body {
     color:white;
     padding: 10px;
     text-align: center;
+    border-radius: 5px;
+}
+.header h1{
+    color: aqua;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .dashboard{
     background-color: #f2f2f2;
@@ -14,10 +19,92 @@ body {
     height: 100%;
     position: fixed;
     overflow-y: auto;
-    border-right: 1px solid #ccc;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
 }
 .content{
     margin-left: 200px;
     padding: 20px;
     background-color:gray;
+}
+:root{
+    --first-color: #4caf50;
+}
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+
+}
+.login-form{
+    width: 360px;
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
+}
+.login-title{
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+.input-group{
+    position: relative;
+    height:48px;
+    margin-bottom: 1.5rem;
+}
+.input-field{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1.4rem;
+    border: 1px solid #b0bec5;
+    border-radius: 0.5rem;
+    outline: none;
+    padding: 1rem;
+    background: none;
+    z-index: 1;
+
+}
+.input-label{
+    position: absolute;
+    left:1rem;
+    top: 1rem;
+    padding: 0 0.25rem;
+    background:none;
+    color:#6b6b6b;
+    font-size:1rem;
+    transition: 0.3s;
+}
+.submit-button{
+    display: block;
+    margin-left: auto;
+    padding: 0.75rem 2rem;
+    outline: none;
+    border: none;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition:0.3s
+}
+.submit-button:hover{
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
+}
+
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown).input-field:not(:focus) +.input-label{
+    top: -0.8rem;
+    left: 0.8rem;
+    color: #4caf50;
+    font-size: 0.8rem;
+    font-weight: 500;
+    z-index: 10;
+}
+.input-field:focus{
+    border: 1.5px solid #4caf50;
 }
